@@ -19,7 +19,7 @@
 
 `perl -d {{script.pl}}`
 
-- Edit all file lines [i]n-place with a specific replacement [e]xpression and save a file with a new extension:
+- Edit all file lines [i]n-place with a specific replacement [e]xpression, saving a backup with a new extension:
 
 `perl -p -i'.{{extension}}' -e 's/{{regular_expression}}/{{replacement}}/g' {{path/to/file}}`
 
@@ -27,10 +27,10 @@
 
 `perl -p -e 's/{{foo\nbar}}/{{foobar}}/g' {{path/to/input_file}} > {{path/to/output_file}}`
 
-- Run a regular [e]xpression on stdin, printing matching [l]ines:
+- Run a regular [e]xpression on `stdin`, printing matching [l]ines:
 
 `cat {{path/to/file}} | perl -n -l -e 'print if /{{regular_expression}}/'`
 
-- Run a regular [e]xpression on stdin, printing only the first capture group for each matching [l]ine:
+- Run a regular [e]xpression on `stdin`, printing only the first capture group for each matching [l]ine:
 
 `cat {{path/to/file}} | perl -n -l -e 'print $1 if /{{before}}({{regular_expression}}){{after}}/'`

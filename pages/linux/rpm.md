@@ -1,6 +1,7 @@
 # rpm
 
 > RPM Package Manager.
+> For equivalent commands in other package managers, see <https://wiki.archlinux.org/title/Pacman/Rosetta>.
 > More information: <https://rpm.org/>.
 
 - Show version of httpd package:
@@ -30,3 +31,7 @@
 - Show changed, missing and/or incorrectly installed files of matching packages:
 
 `rpm --verify --all '{{php-*}}'`
+
+- Display the changelog of a specific package:
+
+`rpm --query --changelog {{package_name}}`
